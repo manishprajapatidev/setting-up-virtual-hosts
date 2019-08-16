@@ -1,18 +1,17 @@
-Create the directory for example:
+**Create the directory for example**
+> sudo mkdir /var/www/example
 
-sudo mkdir /var/www/example
+**Change/Assign ownership of the directory (example):**
+>sudo chown -R $USER:$USER /var/www/example
 
-Change/Assign ownership of the directory (example):
-sudo chown -R $USER:$USER /var/www/example
+**The permissions of your web roots should be correct if you haven't modified your unmask value, but you can make sure by typing**
+>sudo chmod -R 755 /var/www/example
 
-The permissions of your web roots should be correct if you haven't modified your unmask value, but you can make sure by typing:
-sudo chmod -R 755 /var/www/example
+**Make a new virtual host file at /etc/apache2/sites-available/example.conf**
 
-Make a new virtual host file at /etc/apache2/sites-available/example.conf
+>sudo nano /etc/apache2/sites-available/example.conf
 
-sudo nano /etc/apache2/sites-available/example.conf
-
-Paste in the following configuration block, updated for our new directory and domain name:
+**Paste in the following configuration block, updated for our new directory and domain name**
 
 <VirtualHost *:80>
     ServerAdmin webmaster@localhost
