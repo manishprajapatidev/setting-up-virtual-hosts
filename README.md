@@ -18,6 +18,7 @@ When using the Apache web server, you can use virtual hosts (similar to server b
 
 **Paste in the following configuration block, updated for our new directory and domain name**
 
+```
 <VirtualHost *:80>
     ServerAdmin webmaster@localhost
     ServerName example
@@ -26,6 +27,7 @@ When using the Apache web server, you can use virtual hosts (similar to server b
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+```
 
 **Save and close the file when you are finished**
 
